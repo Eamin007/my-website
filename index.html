@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARLO DALI London | Partnership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#060607;--bg2:#0b0b0e;--bg3:#101014;
+  --gold:#c9a955;--gold-d:#a68c3d;--gold-b:#dfc06e;
+  --ivory:#f0ebe0;--silk:#d6d0c2;--ash:#8e897d;--stone:#5e5a50;--line:rgba(255,255,255,.06);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ivory);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:400}
+img{max-width:100%;display:block}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(6,6,7,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:17px;font-weight:500;letter-spacing:5px;color:var(--ivory)}
+.nav-btn{padding:9px 22px;border:1px solid var(--gold-d);color:var(--gold);background:0 0;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-family:inherit;font-weight:500;cursor:pointer;transition:all .25s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
+@media(min-width:768px){.nav{padding:18px 48px}}
+
+/* HERO */
+.hero{padding:80px 24px 64px;min-height:85vh;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(201,169,85,.05),transparent 55%);pointer-events:none}
+.hero-eyebrow{font-size:10px;letter-spacing:7px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;position:relative;z-index:1}
+.hero h1{font-size:clamp(38px,9vw,72px);line-height:1.06;margin-bottom:22px;position:relative;z-index:1}
+.hero h1 i{color:var(--gold)}
+.hero-p{font-size:16px;font-weight:300;color:var(--ash);line-height:1.75;max-width:440px;margin-bottom:36px;position:relative;z-index:1}
+.hero-cta{display:inline-block;padding:16px 44px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:background .25s;position:relative;z-index:1;font-family:inherit}
+.hero-cta:hover{background:var(--gold-b)}
+.hero-numbers{display:flex;gap:36px;margin-top:auto;padding-top:56px;position:relative;z-index:1}
+.hero-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:500;color:var(--gold);line-height:1}
+.hero-lbl{font-size:9px;letter-spacing:2px;color:var(--stone);text-transform:uppercase;margin-top:4px}
+@media(min-width:768px){.hero{padding:100px 48px 80px;min-height:90vh}.hero-numbers{gap:56px}}
+
+/* STRIP */
+.strip{display:flex;gap:32px;padding:18px 24px;overflow-x:auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip span{font-size:11px;letter-spacing:3px;color:var(--stone);text-transform:uppercase;white-space:nowrap;flex-shrink:0;font-weight:300}
+@media(min-width:768px){.strip{justify-content:center;gap:44px;padding:20px 48px}}
+
+/* SECTION */
+.sec{padding:72px 24px;max-width:960px;margin:0 auto}
+.sec-tag{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.sec h2{font-size:clamp(26px,5vw,40px);line-height:1.15;margin-bottom:10px}
+.sec h2 i{color:var(--gold)}
+.sec-rule{width:36px;height:2px;background:var(--gold);margin-bottom:18px}
+.sec-p{font-size:14.5px;color:var(--ash);line-height:1.7;max-width:500px;margin-bottom:40px;font-weight:300}
+@media(min-width:768px){.sec{padding:96px 48px}}
+
+/* TIERS */
+.tiers{display:grid;gap:2px}
+.tier{background:var(--bg2);padding:32px 24px;border:1px solid var(--line);transition:border-color .3s}
+.tier:hover{border-color:rgba(201,169,85,.25)}
+.tier.ft{border-color:rgba(201,169,85,.35);background:var(--bg3)}
+.tier.ft .tier-bar{background:var(--gold);height:3px;margin:-32px -24px 24px;width:calc(100% + 48px)}
+.tier-tag{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;font-weight:500}
+.tier h3{font-size:22px;margin-bottom:4px}
+.tier-price{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);font-weight:500;margin-bottom:4px}
+.tier-price small{font-size:12px;color:var(--stone);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300}
+.tier-desc{font-size:13px;color:var(--ash);line-height:1.6;margin-bottom:20px;font-weight:300}
+.tier-list{list-style:none;margin-bottom:24px}
+.tier-list li{font-size:12.5px;color:var(--silk);padding:8px 0;border-bottom:1px solid var(--line);font-weight:300;padding-left:18px;position:relative}
+.tier-list li::before{content:'\25C7';position:absolute;left:0;color:var(--gold);font-size:8px;top:10px}
+.tier-btn{display:block;width:100%;text-align:center;padding:14px;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:all .25s;cursor:pointer;font-family:inherit;border:1px solid var(--gold-d);color:var(--gold);background:0 0}
+.tier-btn:hover,.tier.ft .tier-btn{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+@media(min-width:768px){.tiers{grid-template-columns:repeat(3,1fr)}}
+
+/* REASONS */
+.reasons{display:grid;gap:2px}
+.reason{padding:28px 24px;background:var(--bg2);border-left:2px solid rgba(201,169,85,.15);transition:border-color .3s}
+.reason:hover{border-left-color:var(--gold)}
+.reason-n{font-family:'Playfair Display',serif;font-size:32px;color:rgba(201,169,85,.15);line-height:1;margin-bottom:6px}
+.reason h4{font-size:14px;font-weight:600;color:var(--ivory);margin-bottom:6px;font-family:'Plus Jakarta Sans',sans-serif}
+.reason p{font-size:13px;color:var(--ash);line-height:1.65;font-weight:300}
+@media(min-width:768px){.reasons{grid-template-columns:1fr 1fr}}
+
+/* SCARCITY */
+.scar{padding:36px 24px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.scar p{font-size:14px;color:var(--ash);font-weight:300;line-height:1.7}
+.scar strong{color:var(--gold);font-weight:500}
+@media(min-width:768px){.scar{padding:44px 48px}}
+
+/* FORM */
+.form-sec{padding:72px 24px;background:var(--bg2)}
+.form-w{max-width:600px;margin:0 auto}
+.form-sec h2{text-align:center;font-size:clamp(26px,5vw,40px);margin-bottom:6px}
+.form-sec h2 i{color:var(--gold)}
+.form-sub{text-align:center;font-size:14px;color:var(--ash);margin-bottom:40px;font-weight:300}
+.fg{display:grid;grid-template-columns:1fr;gap:14px}
+.fg label{display:block;font-size:9px;letter-spacing:3px;color:var(--stone);text-transform:uppercase;margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:14px;font-size:14px;font-family:inherit;font-weight:300;outline:0;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--stone)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%23c9a955' fill='none' stroke-width='1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.fg select option{background:var(--bg);color:var(--ivory)}
+.fg textarea{resize:vertical;min-height:88px}
+.f-btn{display:block;width:100%;padding:17px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;transition:background .25s;margin-top:4px}
+.f-btn:hover{background:var(--gold-b)}
+.f-btn.done{background:#3a7d3e;cursor:default;letter-spacing:5px}
+.f-note{text-align:center;margin-top:14px;font-size:11px;color:var(--stone);font-weight:300}
+@media(min-width:640px){.fg{grid-template-columns:1fr 1fr}.fg-full{grid-column:1/-1}}
+@media(min-width:768px){.form-sec{padding:96px 48px}}
+
+/* FOOTER */
+.foot{padding:48px 24px;text-align:center;border-top:1px solid var(--line)}
+.foot-logo{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:6px;color:var(--ivory);margin-bottom:6px}
+.foot-cities{font-size:10px;color:var(--stone);letter-spacing:2px;margin-bottom:20px}
+.foot-links{display:flex;justify-content:center;gap:20px;margin-bottom:20px}
+.foot-links a{font-size:11px;color:var(--gold-d);letter-spacing:1px;text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--gold)}
+.foot-copy{font-size:10px;color:var(--stone)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">CARLO DALI</span>
+  <a href="#apply" class="nav-btn">Apply</a>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Partnership Programme</p>
+  <h1>Become an<br><i>Approved Partner</i></h1>
+  <p class="hero-p">Join a curated network of luxury retailers, boutiques, and hotels carrying CARLO DALI London worldwide.</p>
+  <a href="#apply" class="hero-cta">Apply for Partnership</a>
+  <div class="hero-numbers">
+    <div><div class="hero-num">43+</div><div class="hero-lbl">Fragrances</div></div>
+    <div><div class="hero-num">15+</div><div class="hero-lbl">Countries</div></div>
+    <div><div class="hero-num">6</div><div class="hero-lbl">Product Lines</div></div>
+  </div>
+</section>
+
+<div class="strip">
+  <span>Douglas</span><span>Osswald NYC</span><span>5-Star Hotels</span><span>Mykonos</span><span>London</span><span>Athens</span><span>Dubai</span><span>New York</span><span>Milan</span><span>Fragrantica</span>
+</div>
+
+<section class="sec" id="packages">
+  <div class="sec-tag">Partnership Tiers</div>
+  <h2>Select Your <i>Level</i></h2>
+  <div class="sec-rule"></div>
+  <p class="sec-p">Three tiers for different scales. From a curated starter to a complete flagship experience.</p>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-tag">Entry</div>
+      <h3>Starter Pack</h3>
+      <div class="tier-price">&euro;2,000 <small>one-time</small></div>
+      <p class="tier-desc">Test CARLO DALI with your clientele before a larger commitment.</p>
+      <ul class="tier-list">
+        <li>10 best-selling fragrances (5 units each)</li>
+        <li>Bonus tester unit per fragrance</li>
+        <li>Official partner certificate</li>
+        <li>Digital marketing assets</li>
+        <li>Product training materials</li>
+        <li>Dedicated account contact</li>
+      </ul>
+      <a href="#apply" class="tier-btn">Apply</a>
+    </div>
+    <div class="tier ft">
+      <div class="tier-bar"></div>
+      <div class="tier-tag">Signature</div>
+      <h3>Perfume Bar</h3>
+      <div class="tier-price">&euro;8,000 <small>one-time</small></div>
+      <p class="tier-desc">The branded in-store concept that drives foot traffic and repeat purchases.</p>
+      <ul class="tier-list">
+        <li>Full fragrance collection display</li>
+        <li>Branded Perfume Bar installation</li>
+        <li>Visual merchandising kit</li>
+        <li>Co-branded marketing campaign</li>
+        <li>Staff training programme</li>
+        <li>Exclusive territory consideration</li>
+        <li>Priority restocks &amp; new launches</li>
+      </ul>
+      <a href="#apply" class="tier-btn">Apply</a>
+    </div>
+    <div class="tier">
+      <div class="tier-tag">Premium</div>
+      <h3>Flagship Retail</h3>
+      <div class="tier-price">&pound;30,000 <small>one-time</small></div>
+      <p class="tier-desc">Complete CARLO DALI retail universe for department stores and luxury hotels.</p>
+      <ul class="tier-list">
+        <li>Full product universe (fragrances, watches, bags, accessories)</li>
+        <li>Custom retail space design</li>
+        <li>Dedicated brand ambassador</li>
+        <li>National marketing campaign</li>
+        <li>Guaranteed exclusive territory</li>
+        <li>Quarterly business reviews</li>
+        <li>First access to new collections</li>
+        <li>Co-branded PR &amp; events</li>
+      </ul>
+      <a href="#apply" class="tier-btn">Apply</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-tag">The Opportunity</div>
+  <h2>Why <i>Carlo Dali</i></h2>
+  <div class="sec-rule"></div>
+  <p class="sec-p">More than a product line. A luxury brand ecosystem built to grow your business.</p>
+  <div class="reasons">
+    <div class="reason"><div class="reason-n">01</div><h4>Premium Margins</h4><p>Luxury-grade products at competitive wholesale pricing. Strong margins while maintaining prestige.</p></div>
+    <div class="reason"><div class="reason-n">02</div><h4>Global Recognition</h4><p>Distributed through Douglas, Osswald NYC, luxury hotels, and boutiques across 15+ countries.</p></div>
+    <div class="reason"><div class="reason-n">03</div><h4>Full Marketing Support</h4><p>Professional photography, social assets, co-branded campaigns, and POS materials.</p></div>
+    <div class="reason"><div class="reason-n">04</div><h4>Territory Exclusivity</h4><p>Limited partners per region to protect brand integrity and your competitive advantage.</p></div>
+    <div class="reason"><div class="reason-n">05</div><h4>The Perfume Bar Concept</h4><p>A turnkey in-store experience that drives foot traffic. Unique at this price point.</p></div>
+    <div class="reason"><div class="reason-n">06</div><h4>Complete Product Universe</h4><p>43+ fragrances, watches, bags, sunglasses, home fragrances. One brand, multiple revenue streams.</p></div>
+  </div>
+</section>
+
+<div class="scar">
+  <p>We approve a <strong>limited number of partners per region</strong> to protect brand exclusivity.<br>Early applicants receive <strong>priority territory consideration</strong>.</p>
+</div>
+
+<section class="form-sec" id="apply">
+  <div class="form-w">
+    <div class="sec-rule" style="margin:0 auto 18px"></div>
+    <h2 style="text-align:center">Apply for <i>Partnership</i></h2>
+    <p class="form-sub">Our team reviews every application within 24 hours.</p>
+    <div class="fg" id="theform">
+      <div><label>Your Name *</label><input type="text" placeholder="Full name"></div>
+      <div><label>Business Name *</label><input type="text" placeholder="Company or store"></div>
+      <div><label>Email *</label><input type="email" placeholder="business@email.com"></div>
+      <div><label>Phone / WhatsApp *</label><input type="tel" placeholder="+1 234 567 890"></div>
+      <div><label>Country *</label><input type="text" placeholder="Country"></div>
+      <div><label>City *</label><input type="text" placeholder="City"></div>
+      <div><label>Business Type *</label>
+        <select><option value="" disabled selected>Select type</option><option>Boutique / Retail</option><option>Luxury Hotel / Resort</option><option>Salon / Spa</option><option>Concept Store</option><option>Department Store</option><option>Online Retailer</option><option>Distributor</option><option>Other</option></select>
+      </div>
+      <div><label>Preferred Package</label>
+        <select><option value="" disabled selected>Select package</option><option>Starter Pack (&euro;2,000)</option><option>Perfume Bar (&euro;8,000)</option><option>Flagship (&pound;30,000)</option><option>Not sure yet</option></select>
+      </div>
+      <div class="fg-full"><label>Why CARLO DALI?</label><textarea placeholder="Tell us about your business and what interests you about a CARLO DALI partnership..."></textarea></div>
+      <div class="fg-full">
+        <button class="f-btn" id="submitBtn" onclick="document.getElementById('submitBtn').textContent='APPLICATION SUBMITTED';document.getElementById('submitBtn').classList.add('done')">Submit Application</button>
+        <p class="f-note">Confidential. We respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-logo">CARLO DALI</div>
+  <div class="foot-cities">LONDON &bull; ATHENS &bull; MYKONOS &bull; NEW YORK &bull; DUBAI</div>
+  <div class="foot-links">
+    <a href="https://carlodali.com" target="_blank">Website</a>
+    <a href="https://instagram.com/carlodalilondonofficial" target="_blank">Instagram</a>
+    <a href="https://corporate.carlodali.com" target="_blank">Corporate</a>
+  </div>
+  <div class="foot-copy">&copy; 2026 CARLO DALI LTD. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

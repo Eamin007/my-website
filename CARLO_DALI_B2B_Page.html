@@ -38,9 +38,20 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 .h-lbl{font-size:8px;letter-spacing:2px;color:var(--stone);text-transform:uppercase;margin-top:3px}
 @media(min-width:768px){.hero{padding:0 48px 56px}.hero-nums{gap:44px}}
 
-/* AS SEEN IN - uses uploaded image */
-.seen{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden}
-.seen img{width:100%;height:auto;display:block;opacity:.85}
+/* AS SEEN IN - custom designed logos */
+.seen{padding:36px 20px 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#1a1a1e;text-align:center}
+.seen-label{font-size:11px;letter-spacing:6px;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:28px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:300}
+.seen-row{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
+.seen-row span{color:rgba(255,255,255,.85);display:inline-flex;align-items:center;flex-direction:column;line-height:1}
+.logo-vogue{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;letter-spacing:5px}
+.logo-bazaar{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;letter-spacing:4px;position:relative}
+.logo-bazaar small{font-size:8px;letter-spacing:3px;font-weight:300;font-family:'Plus Jakarta Sans',sans-serif;display:block;margin-bottom:1px;opacity:.6}
+.logo-gq{font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:700;letter-spacing:1px}
+.logo-elle{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:600;letter-spacing:10px}
+.logo-mc{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:300;letter-spacing:2px;text-transform:lowercase}
+.logo-instyle{font-family:'Playfair Display',serif;font-size:22px;font-weight:400}
+.logo-instyle em{font-style:italic}
+@media(min-width:768px){.seen{padding:40px 48px}.seen-row{gap:52px}.logo-vogue{font-size:32px}.logo-bazaar{font-size:28px}.logo-gq{font-size:34px}.logo-elle{font-size:26px}.logo-mc{font-size:20px}.logo-instyle{font-size:26px}}
 
 /* VIDEO */
 .vid-sec{padding:48px 20px;background:var(--bg)}
@@ -159,9 +170,17 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   </div>
 </section>
 
-<!-- AS SEEN IN - direct from uploaded image -->
+<!-- AS SEEN IN - custom designed -->
 <div class="seen">
-  <img src="cd_seen_in.png" alt="As Seen In - Vogue, Bazaar, GQ, Elle, Marie Claire, InStyle">
+  <div class="seen-label">AS SEEN IN</div>
+  <div class="seen-row">
+    <span class="logo-vogue">VOGUE</span>
+    <span class="logo-bazaar"><small>Harper's</small>BAZAAR</span>
+    <span class="logo-gq">GQ</span>
+    <span class="logo-elle">E L L E</span>
+    <span class="logo-mc">marie claire</span>
+    <span class="logo-instyle"><em>InStyle</em></span>
+  </div>
 </div>
 
 <!-- BRAND VIDEO -->

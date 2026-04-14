@@ -13,61 +13,64 @@ html{scroll-behavior:smooth}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 
-/* NAV */
 .nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(7,7,9,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav-brand{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;letter-spacing:5px;color:var(--ivory)}
 .nav-btn{padding:8px 20px;border:1px solid var(--gold-d);color:var(--gold);background:0 0;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:inherit;font-weight:500;cursor:pointer;transition:all .25s}
 .nav-btn:hover{background:var(--gold);color:var(--bg)}
 @media(min-width:768px){.nav{padding:16px 48px}}
 
-/* HERO */
-.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 20px 48px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('https://carlodali.com/cdn/shop/files/rsz_dsc00199_1.jpg?v=1722521543&width=1920') center/cover no-repeat;opacity:.35}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(7,7,9,.6) 40%,rgba(7,7,9,.3) 100%)}
-.hero-content{position:relative;z-index:2;max-width:640px}
-.hero-tag{display:inline-block;padding:6px 16px;border:1px solid rgba(201,168,76,.3);font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:24px}
-.hero h1{font-size:clamp(34px,8vw,62px);line-height:1.08;margin-bottom:16px}
+/* HERO - uses uploaded watch image as background */
+.hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 20px 40px;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.3}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 5%,rgba(7,7,9,.7) 40%,rgba(7,7,9,.4) 100%)}
+.hero-content{position:relative;z-index:2;max-width:600px}
+.hero-tag{display:inline-block;padding:5px 14px;border:1px solid rgba(201,168,76,.3);font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-size:clamp(32px,8vw,58px);line-height:1.08;margin-bottom:14px}
 .hero h1 i{color:var(--gold)}
-.hero-p{font-size:15px;font-weight:300;color:var(--ash);line-height:1.7;max-width:420px;margin-bottom:32px}
-.hero-cta{display:inline-block;padding:15px 40px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .25s}
+.hero-p{font-size:15px;font-weight:300;color:var(--ash);line-height:1.7;max-width:400px;margin-bottom:28px}
+.hero-cta{display:inline-block;padding:14px 36px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .25s}
 .hero-cta:hover{background:var(--gold-b)}
-.hero-nums{display:flex;gap:32px;margin-top:40px}
-.hero-nums div{border-left:1px solid rgba(201,168,76,.3);padding-left:16px}
+.hero-nums{display:flex;gap:28px;margin-top:36px}
+.hero-nums div{border-left:1px solid rgba(201,168,76,.3);padding-left:14px}
 .hero-nums div:first-child{border:none;padding-left:0}
-.h-val{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);font-weight:500;line-height:1}
-.h-lbl{font-size:9px;letter-spacing:2px;color:var(--stone);text-transform:uppercase;margin-top:3px}
-@media(min-width:768px){.hero{padding:0 48px 64px}}
+.h-val{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold);font-weight:500;line-height:1}
+.h-lbl{font-size:8px;letter-spacing:2px;color:var(--stone);text-transform:uppercase;margin-top:3px}
+@media(min-width:768px){.hero{padding:0 48px 56px}.hero-nums{gap:44px}}
 
-/* AS SEEN IN */
-.seen{padding:28px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);text-align:center}
-.seen-label{font-size:9px;letter-spacing:5px;color:var(--stone);text-transform:uppercase;margin-bottom:16px}
-.seen-logos{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
-.seen-logos span{font-family:'Playfair Display',serif;font-size:15px;color:rgba(240,235,224,.45);letter-spacing:2px;font-weight:500}
-@media(min-width:768px){.seen{padding:32px 48px}.seen-logos{gap:44px}.seen-logos span{font-size:17px}}
+/* AS SEEN IN - uses uploaded image */
+.seen{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden}
+.seen img{width:100%;height:auto;display:block;opacity:.85}
 
-/* PRODUCT SHOWCASE */
-.showcase{padding:56px 20px;background:var(--bg)}
-.showcase-inner{max-width:960px;margin:0 auto}
-.showcase-label{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
-.showcase h2{font-size:clamp(24px,5vw,36px);margin-bottom:8px;line-height:1.15}
-.showcase h2 i{color:var(--gold)}
-.showcase-rule{width:36px;height:2px;background:var(--gold);margin-bottom:16px}
-.showcase-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:460px;margin-bottom:32px;font-weight:300}
-.showcase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
-.showcase-item{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg2)}
-.showcase-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s;opacity:.9}
-.showcase-item:hover img{transform:scale(1.04);opacity:1}
-.showcase-item-label{position:absolute;bottom:0;left:0;right:0;padding:12px;background:linear-gradient(to top,rgba(7,7,9,.85),transparent);font-size:11px;letter-spacing:2px;color:var(--ivory);text-transform:uppercase;font-weight:400}
-@media(min-width:768px){.showcase{padding:80px 48px}.showcase-grid{grid-template-columns:repeat(4,1fr)}}
+/* VIDEO */
+.vid-sec{padding:48px 20px;background:var(--bg)}
+.vid-inner{max-width:900px;margin:0 auto}
+.vid-label{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.vid-sec h2{font-size:clamp(24px,5vw,36px);margin-bottom:8px;line-height:1.15}
+.vid-sec h2 i{color:var(--gold)}
+.vid-rule{width:36px;height:2px;background:var(--gold);margin-bottom:14px}
+.vid-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:440px;margin-bottom:24px;font-weight:300}
+.vid-wrap{width:100%;aspect-ratio:16/9;background:var(--bg2);border:1px solid var(--line);overflow:hidden}
+.vid-wrap video{width:100%;height:100%;object-fit:cover}
+@media(min-width:768px){.vid-sec{padding:72px 48px}}
 
 /* SECTION */
-.sec{padding:64px 20px;max-width:960px;margin:0 auto}
+.sec{padding:56px 20px;max-width:920px;margin:0 auto}
 .sec-tag{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
 .sec h2{font-size:clamp(24px,5vw,36px);line-height:1.15;margin-bottom:8px}
 .sec h2 i{color:var(--gold)}
-.sec-rule{width:36px;height:2px;background:var(--gold);margin-bottom:16px}
-.sec-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:460px;margin-bottom:36px;font-weight:300}
-@media(min-width:768px){.sec{padding:88px 48px}}
+.sec-rule{width:36px;height:2px;background:var(--gold);margin-bottom:14px}
+.sec-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:440px;margin-bottom:32px;font-weight:300}
+@media(min-width:768px){.sec{padding:80px 48px}}
+
+/* PRODUCT CATEGORIES */
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:8px}
+.cat{background:var(--bg2);padding:28px 16px;text-align:center;border:1px solid var(--line);transition:border-color .3s}
+.cat:hover{border-color:rgba(201,168,76,.25)}
+.cat-icon{font-size:28px;margin-bottom:8px}
+.cat-name{font-size:12px;letter-spacing:3px;color:var(--ivory);text-transform:uppercase;font-weight:500;margin-bottom:3px}
+.cat-count{font-size:11px;color:var(--stone);font-weight:300}
+@media(min-width:768px){.cats{grid-template-columns:repeat(3,1fr)}}
 
 /* TIERS */
 .tiers{display:grid;gap:2px}
@@ -77,10 +80,10 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 .tier.ft::before{content:'';display:block;height:3px;background:var(--gold);margin:-28px -20px 20px;width:calc(100% + 40px)}
 .t-tag{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;font-weight:500}
 .tier h3{font-size:20px;margin-bottom:3px}
-.t-price{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);font-weight:500;margin-bottom:3px}
+.t-price{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);font-weight:500;margin-bottom:3px}
 .t-price small{font-size:12px;color:var(--stone);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300}
-.t-desc{font-size:12.5px;color:var(--ash);line-height:1.6;margin-bottom:18px;font-weight:300}
-.t-list{list-style:none;margin-bottom:22px}
+.t-desc{font-size:12px;color:var(--ash);line-height:1.6;margin-bottom:16px;font-weight:300}
+.t-list{list-style:none;margin-bottom:20px}
 .t-list li{font-size:12px;color:var(--silk);padding:7px 0;border-bottom:1px solid var(--line);font-weight:300;padding-left:16px;position:relative}
 .t-list li::before{content:'\25C7';position:absolute;left:0;color:var(--gold);font-size:7px;top:9px}
 .t-btn{display:block;width:100%;text-align:center;padding:13px;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:500;cursor:pointer;font-family:inherit;border:1px solid var(--gold-d);color:var(--gold);background:0 0;transition:all .25s}
@@ -92,38 +95,21 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 .reason{padding:24px 20px;background:var(--bg2);border-left:2px solid rgba(201,168,76,.12);transition:border-color .3s}
 .reason:hover{border-left-color:var(--gold)}
 .r-n{font-family:'Playfair Display',serif;font-size:28px;color:rgba(201,168,76,.12);line-height:1;margin-bottom:4px}
-.reason h4{font-size:14px;font-weight:600;color:var(--ivory);margin-bottom:5px;font-family:'Plus Jakarta Sans',sans-serif}
-.reason p{font-size:12.5px;color:var(--ash);line-height:1.6;font-weight:300}
+.reason h4{font-size:14px;font-weight:600;color:var(--ivory);margin-bottom:4px;font-family:'Plus Jakarta Sans',sans-serif}
+.reason p{font-size:12px;color:var(--ash);line-height:1.6;font-weight:300}
 @media(min-width:768px){.reasons{grid-template-columns:1fr 1fr}}
 
-/* VIDEO SECTION */
-.vid-sec{padding:56px 20px;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.vid-inner{max-width:960px;margin:0 auto}
-.vid-sec .sec-tag{margin-bottom:10px}
-.vid-sec h2{font-size:clamp(24px,5vw,36px);margin-bottom:8px}
-.vid-sec h2 i{color:var(--gold)}
-.vid-sec .sec-rule{margin-bottom:16px}
-.vid-sec .sec-p{margin-bottom:28px}
-.vid-placeholder{position:relative;width:100%;aspect-ratio:16/9;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden}
-.vid-placeholder::after{content:'';position:absolute;inset:0;background:url('https://carlodali.com/cdn/shop/files/cover_2.jpg?v=1728130199&width=1200') center/cover no-repeat;opacity:.3}
-.play-btn{position:relative;z-index:2;width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;background:rgba(7,7,9,.6);transition:all .3s}
-.play-btn:hover{background:var(--gold);transform:scale(1.08)}
-.play-btn svg{width:20px;height:20px;fill:var(--gold);margin-left:3px}
-.play-btn:hover svg{fill:var(--bg)}
-@media(min-width:768px){.vid-sec{padding:80px 48px}}
-
-/* SCARCITY */
 .scar{padding:32px 20px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
 .scar p{font-size:13px;color:var(--ash);font-weight:300;line-height:1.7}
 .scar strong{color:var(--gold);font-weight:500}
-@media(min-width:768px){.scar{padding:40px 48px}.scar p{font-size:14px}}
+@media(min-width:768px){.scar{padding:36px 48px}}
 
 /* FORM */
-.form-sec{padding:64px 20px;background:var(--bg2)}
-.form-w{max-width:580px;margin:0 auto}
+.form-sec{padding:56px 20px;background:var(--bg2)}
+.form-w{max-width:560px;margin:0 auto}
 .form-sec h2{text-align:center;font-size:clamp(24px,5vw,36px);margin-bottom:6px}
 .form-sec h2 i{color:var(--gold)}
-.form-sub{text-align:center;font-size:13px;color:var(--ash);margin-bottom:36px;font-weight:300}
+.form-sub{text-align:center;font-size:13px;color:var(--ash);margin-bottom:32px;font-weight:300}
 .fg{display:grid;grid-template-columns:1fr;gap:12px}
 .fg label{display:block;font-size:9px;letter-spacing:2.5px;color:var(--stone);text-transform:uppercase;margin-bottom:4px}
 .fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:13px 14px;font-size:14px;font-family:inherit;font-weight:300;outline:0;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
@@ -137,17 +123,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 .f-btn.done{background:#3a7d3e;cursor:default;letter-spacing:5px}
 .f-note{text-align:center;margin-top:12px;font-size:10px;color:var(--stone);font-weight:300}
 @media(min-width:640px){.fg{grid-template-columns:1fr 1fr}.fg-full{grid-column:1/-1}}
-@media(min-width:768px){.form-sec{padding:88px 48px}}
+@media(min-width:768px){.form-sec{padding:80px 48px}}
 
-/* FOOTER */
-.foot{padding:40px 20px;text-align:center;border-top:1px solid var(--line)}
+.foot{padding:36px 20px;text-align:center;border-top:1px solid var(--line)}
 .foot-logo{font-family:'Playfair Display',serif;font-size:16px;letter-spacing:6px;color:var(--ivory);margin-bottom:4px}
-.foot-cities{font-size:9px;color:var(--stone);letter-spacing:2px;margin-bottom:16px}
-.foot-links{display:flex;justify-content:center;gap:16px;margin-bottom:16px}
-.foot-links a{font-size:10px;color:var(--gold-d);letter-spacing:1px;text-decoration:none;transition:color .2s}
-.foot-links a:hover{color:var(--gold)}
+.foot-cities{font-size:9px;color:var(--stone);letter-spacing:2px;margin-bottom:14px}
+.foot-links{display:flex;justify-content:center;gap:16px;margin-bottom:14px}
+.foot-links a{font-size:10px;color:var(--gold-d);letter-spacing:1px;text-decoration:none}
 .foot-copy{font-size:9px;color:var(--stone)}
-@media(min-width:768px){.foot{padding:48px 48px}}
 </style>
 </head>
 <body>
@@ -157,9 +140,11 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   <a href="#apply" class="nav-btn">Apply</a>
 </nav>
 
-<!-- HERO WITH REAL BRAND IMAGE -->
+<!-- HERO with uploaded watch/marble image -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <img src="cd_watches.png" alt="CARLO DALI Watches">
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-tag">B2B Partnership</div>
@@ -174,44 +159,40 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   </div>
 </section>
 
-<!-- AS SEEN IN - MATCHING THEIR EXACT STYLE -->
+<!-- AS SEEN IN - direct from uploaded image -->
 <div class="seen">
-  <div class="seen-label">As Seen In</div>
-  <div class="seen-logos">
-    <span>VOGUE</span>
-    <span>BAZAAR</span>
-    <span>GQ</span>
-    <span>ELLE</span>
-    <span>Marie Claire</span>
-    <span>InStyle</span>
-  </div>
+  <img src="cd_seen_in.png" alt="As Seen In - Vogue, Bazaar, GQ, Elle, Marie Claire, InStyle">
 </div>
 
-<!-- PRODUCT SHOWCASE WITH REAL IMAGES -->
-<section class="showcase">
-  <div class="showcase-inner">
-    <div class="showcase-label">The Collection</div>
-    <h2>A Complete <i>Luxury Universe</i></h2>
-    <div class="showcase-rule"></div>
-    <p class="showcase-p">Fragrances, watches, bags, sunglasses, home collections, and accessories. One brand partnership, multiple revenue streams.</p>
-    <div class="showcase-grid">
-      <div class="showcase-item">
-        <img src="https://carlodali.com/cdn/shop/files/main_pic_6.jpg?v=1717430399&width=600" alt="Perfumes" loading="lazy">
-        <div class="showcase-item-label">Fragrances</div>
-      </div>
-      <div class="showcase-item">
-        <img src="https://carlodali.com/cdn/shop/files/category-watches.jpg?v=1717430399&width=600" alt="Watches" loading="lazy">
-        <div class="showcase-item-label">Watches</div>
-      </div>
-      <div class="showcase-item">
-        <img src="https://carlodali.com/cdn/shop/files/category-bags.jpg?v=1717430399&width=600" alt="Bags" loading="lazy">
-        <div class="showcase-item-label">Signature Bags</div>
-      </div>
-      <div class="showcase-item">
-        <img src="https://carlodali.com/cdn/shop/files/category-sunglasses.jpg?v=1717430399&width=600" alt="Sunglasses" loading="lazy">
-        <div class="showcase-item-label">Sunglasses</div>
-      </div>
+<!-- BRAND VIDEO -->
+<section class="vid-sec">
+  <div class="vid-inner">
+    <div class="vid-label">The Brand</div>
+    <h2>Experience <i>Carlo Dali</i></h2>
+    <div class="vid-rule"></div>
+    <p class="vid-p">Discover why luxury retailers worldwide are partnering with CARLO DALI London.</p>
+    <div class="vid-wrap">
+      <video controls preload="metadata" poster="">
+        <source src="carlo_dali_brand.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
     </div>
+  </div>
+</section>
+
+<!-- PRODUCT UNIVERSE -->
+<section class="sec">
+  <div class="sec-tag">The Collection</div>
+  <h2>A Complete <i>Luxury Universe</i></h2>
+  <div class="sec-rule"></div>
+  <p class="sec-p">One brand partnership. Multiple revenue streams for your business.</p>
+  <div class="cats">
+    <div class="cat"><div class="cat-icon">&#x1F48E;</div><div class="cat-name">Fragrances</div><div class="cat-count">43+ Perfumes, 5 Collections</div></div>
+    <div class="cat"><div class="cat-icon">&#x231A;</div><div class="cat-name">Watches</div><div class="cat-count">Premium Timepieces</div></div>
+    <div class="cat"><div class="cat-icon">&#x1F45C;</div><div class="cat-name">Bags</div><div class="cat-count">Men's, Women's, Unisex</div></div>
+    <div class="cat"><div class="cat-icon">&#x1F576;</div><div class="cat-name">Sunglasses</div><div class="cat-count">Luxury Eyewear</div></div>
+    <div class="cat"><div class="cat-icon">&#x1F3E0;</div><div class="cat-name">Home</div><div class="cat-count">Diffusers, Soaps, Lotions</div></div>
+    <div class="cat"><div class="cat-icon">&#x1F381;</div><div class="cat-name">Gift Sets</div><div class="cat-count">Discovery Kits, Pelana Cases</div></div>
   </div>
 </section>
 
@@ -220,7 +201,7 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   <div class="sec-tag">Partnership Tiers</div>
   <h2>Select Your <i>Level</i></h2>
   <div class="sec-rule"></div>
-  <p class="sec-p">Three tiers designed for different scales. Start small or go all in.</p>
+  <p class="sec-p">Three tiers for different scales. Start small or go all in.</p>
   <div class="tiers">
     <div class="tier">
       <div class="t-tag">Entry</div>
@@ -281,26 +262,11 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   <p class="sec-p">More than a product line. A complete luxury brand ecosystem.</p>
   <div class="reasons">
     <div class="reason"><div class="r-n">01</div><h4>Premium Margins</h4><p>Luxury products at competitive wholesale pricing. Strong margins for your business.</p></div>
-    <div class="reason"><div class="r-n">02</div><h4>Global Recognition</h4><p>Featured in Vogue, GQ, Elle, Bazaar. Distributed through Douglas, Osswald NYC, and 5-star hotels.</p></div>
-    <div class="reason"><div class="r-n">03</div><h4>Full Marketing Support</h4><p>Photography, social assets, co-branded campaigns, and POS materials provided.</p></div>
+    <div class="reason"><div class="r-n">02</div><h4>Global Recognition</h4><p>Featured in Vogue, GQ, Elle, Bazaar. Distributed through Douglas, Osswald NYC, and 5-star hotels worldwide.</p></div>
+    <div class="reason"><div class="r-n">03</div><h4>Full Marketing Support</h4><p>Photography, social assets, co-branded campaigns, and POS materials provided to every partner.</p></div>
     <div class="reason"><div class="r-n">04</div><h4>Territory Exclusivity</h4><p>Limited partners per region. Early applicants get priority territory consideration.</p></div>
     <div class="reason"><div class="r-n">05</div><h4>The Perfume Bar Concept</h4><p>A turnkey in-store experience unlike anything competitors offer at this price point.</p></div>
-    <div class="reason"><div class="r-n">06</div><h4>Complete Product Universe</h4><p>43+ fragrances, watches, bags, sunglasses, home collections. Multiple revenue streams.</p></div>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section class="vid-sec">
-  <div class="vid-inner">
-    <div class="sec-tag">The Brand</div>
-    <h2>Experience <i>Carlo Dali</i></h2>
-    <div class="sec-rule"></div>
-    <p class="sec-p">Watch our brand story and see why luxury retailers worldwide are partnering with CARLO DALI London.</p>
-    <div class="vid-placeholder" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay\' allowfullscreen></iframe>'">
-      <div class="play-btn">
-        <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
-      </div>
-    </div>
+    <div class="reason"><div class="r-n">06</div><h4>Complete Product Universe</h4><p>43+ fragrances, watches, bags, sunglasses, home collections. One brand, multiple revenue streams.</p></div>
   </div>
 </section>
 
@@ -309,10 +275,10 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
   <p>We approve a <strong>limited number of partners per region</strong> to protect brand exclusivity.<br>Early applicants receive <strong>priority territory consideration</strong>.</p>
 </div>
 
-<!-- APPLICATION FORM -->
+<!-- FORM -->
 <section class="form-sec" id="apply">
   <div class="form-w">
-    <div class="sec-rule" style="margin:0 auto 16px"></div>
+    <div class="sec-rule" style="margin:0 auto 14px"></div>
     <h2 style="text-align:center">Apply for <i>Partnership</i></h2>
     <p class="form-sub">Our Partnership Team reviews every application within 24 hours.</p>
     <div class="fg">
@@ -328,7 +294,7 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
       <div><label>Preferred Package</label>
         <select><option value="" disabled selected>Select package</option><option>Starter Pack (&euro;2,000)</option><option>Perfume Bar (&euro;8,000)</option><option>Flagship (&pound;30,000)</option><option>Not sure yet</option></select>
       </div>
-      <div class="fg-full"><label>Why CARLO DALI?</label><textarea placeholder="Tell us about your business and what interests you about a CARLO DALI partnership..."></textarea></div>
+      <div class="fg-full"><label>Why CARLO DALI?</label><textarea placeholder="Tell us about your business and what interests you..."></textarea></div>
       <div class="fg-full">
         <button class="f-btn" id="sbtn" onclick="document.getElementById('sbtn').textContent='APPLICATION SUBMITTED';document.getElementById('sbtn').classList.add('done')">Submit Application</button>
         <p class="f-note">Confidential. We respond within 24 hours.</p>
